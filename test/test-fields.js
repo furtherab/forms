@@ -217,6 +217,8 @@ exports['boolean parse'] = function(test){
     test.equals(fields.boolean().parse(''), false);
     test.equals(fields.boolean().parse('on'), true);
     test.equals(fields.boolean().parse('true'), true);
+    test.equals(fields.boolean().parse('1'), true);
+    test.equals(fields.boolean().parse('0'), false);
     test.done();
 };
 
